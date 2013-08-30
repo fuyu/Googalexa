@@ -11,7 +11,7 @@
 .googalexa-menu-google {list-style-image: url("chrome://googalexa/skin/google.png");}
 .googalexa-menu-alexa {list-style-image: url("chrome://googalexa/skin/alexa.png");}
 
-.googalexa-icon-button  {list-style-image: url("chrome://googalexa/skin/icon.png");
+.googalexa-icon-button  {list-style-image: url("chrome://googalexa/skin/icon.button.png");
 	-moz-box-orient:horizontal !important;}
 
 .googalexa-hidden {display:none !important;}
