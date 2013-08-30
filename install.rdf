@@ -5,7 +5,7 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>googalexa@rank.it</em:id>
-    <em:version>1.0.5</em:version>
+    <em:version>1.1</em:version>
     <em:type>2</em:type>
     
 	<!-- Front End MetaData -->

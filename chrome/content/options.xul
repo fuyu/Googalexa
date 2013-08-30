@@ -11,6 +11,8 @@
 			<preference id="googalexa-formatnumbers" name="extensions.googalexa.formatNumbers" type="bool"/>
 			<preference id="googalexa-roundthousands" name="extensions.googalexa.roundThousands" type="bool"/>
 			<preference id="googalexa-roundmillions" name="extensions.googalexa.roundMillions" type="bool"/>
+			<preference id="googalexa-googlelabelstyle" name="extensions.googalexa.googleLabelStyle" type="string"/>
+			<preference id="googalexa-alexalabelstyle" name="extensions.googalexa.alexaLabelStyle" type="string"/>
 
 		</preferences>
 
@@ -33,6 +35,22 @@
 					</row>
 				</rows>
 			</grid>
+			<groupbox style="margin-top:20px;margin-bottom:10px">
+				<caption label="Layout Styles (regular CSS)" />
+					<grid>
+						<rows>
+							<row>
+								<label control="rm" value="Google Label:" style="padding-top:15px" />
+								<textbox id="rm" multiline="true" cols="30" rows="3" preference="googalexa-googlelabelstyle"/>
+							</row>
+							<row>
+								<label control="rm" value="Alexa Label:" style="padding-top:15px" />
+								<textbox id="rm" multiline="true" cols="30" rows="3" preference="googalexa-alexalabelstyle"/>
+							</row>
+						</rows>
+					</grid>				
+			</groupbox>	
+
 		</groupbox>	
 
 	</prefpane>

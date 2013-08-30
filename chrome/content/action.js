@@ -165,7 +165,12 @@ Googalexa = {
 	setGoogleRank : function(rank) {
 		var label = document.getElementById('googalexa-google-rank-label'),
 			menuitem1 = document.getElementById('googalexa-menuitem-google-1'),
-			menuitem2 = document.getElementById('googalexa-menuitem-google-2');
+			menuitem2 = document.getElementById('googalexa-menuitem-google-2'),
+			prefs = Components.classes["@mozilla.org/preferences-service;1"].
+				getService(Components.interfaces.nsIPrefService).
+				getBranch("extensions.googalexa.");
+
+		var labelStyle = prefs.getCharPref('googleLabelStyle');
 
 		if (rank == 10) {
 			label.removeAttribute('value');
@@ -179,6 +184,8 @@ Googalexa = {
 			//label.value = rank;
 			label.setAttribute('value', rank);
 		}
+
+		label.setAttribute('style', labelStyle);
 		
 		menuitem1.setAttribute('label', 'Google: ' + rank + '/10');
 		menuitem2.setAttribute('label', 'Google: ' + rank + '/10');
@@ -188,12 +195,15 @@ Googalexa = {
 		var label = document.getElementById('googalexa-alexa-rank-label'),
 			menuitem1 = document.getElementById('googalexa-menuitem-alexa-1'),
 			menuitem2 = document.getElementById('googalexa-menuitem-alexa-2'),
-			prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.googalexa."),
+			prefs = Components.classes["@mozilla.org/preferences-service;1"].
+				getService(Components.interfaces.nsIPrefService).
+				getBranch("extensions.googalexa."),
 			rankLabel, rankMenu;
 		
 		var formatNumbers = prefs.getBoolPref('formatNumbers');
 		var roundThousands = prefs.getBoolPref('roundThousands');
 		var roundMillions = prefs.getBoolPref('roundMillions');
+		var labelStyle = prefs.getCharPref('alexaLabelStyle');
 		
 		if (rank > 999999 && roundMillions) {
 			var tmp = parseInt(rank) / 1000000;
@@ -214,6 +224,7 @@ Googalexa = {
 		this.removeClass(label, 'googalexa-rank-bg-alexa-transparent');
 		//label.value = rankLabel;
 		label.setAttribute('value', rankLabel);
+		label.setAttribute('style', labelStyle);
 		
 		menuitem1.setAttribute('label', 'Alexa: ' + rankMenu);
 		menuitem2.setAttribute('label', 'Alexa: ' + rankMenu);
