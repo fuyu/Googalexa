@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+<toolbaritem id="googalexa-toolbaritem">
+
+	<toolbarbutton 
+		id="googalexa-rank-button-2"
+		class="googalexa-rank-button"
+		type="menu">
+
+		<label id="googalexa-rank-button-label" value="GoogAlexa" class="googalexa-hidden" />
+
+		<box 
+			orient="horizontal" 
+			id="googalexa-rank-box"
+			class="googalexa-hidden">
+
+			<label id="googalexa-google-rank-label" class="plain googalexa-google-rank-label">
+				<image id="googalexa-google-rank-status-img" class="googalexa-rank-loading-img" />
+			</label>
+			<label  class="plain" style="padding:0px 2px"></label>
+			<label id="googalexa-alexa-rank-label" class="plain googalexa-alexa-rank-label">
+				<image id="googalexa-alexa-rank-status-img" class="googalexa-rank-loading-img" />
+			</label>
+		</box>
+		<box orient="horizontal" id="googalexa-na-box">
+			<label class="googalexa-google-na-label plain">
+				<image id="googalexa-google-rank-status-img" class="googalexa-rank-empty-img" />
+			</label>
+			<label class="googalexa-alexa-na-label plain">
+				<image id="googalexa-google-rank-status-img" class="googalexa-rank-empty-img" />
+			</label>
+		</box>
+
+		<menupopup id="googalexa-google-alex-menu-2">
+		  <menuitem label="Google: n/a" id="googalexa-menuitem-google-2" class="menuitem-iconic googalexa-menu-google" />
+		  <menuitem label="Alexa: n/a" id="googalexa-menuitem-alexa-2" class="menuitem-iconic googalexa-menu-alexa" />
+		  <menuitem 
+		  	label="Reload"
+		  	id="googalexa-google-alexa-reload-2" 
+		  	class="menuitem-iconic googalexa-menu-reload" 
+		  	oncommand="Googalexa.reload()" />
+		</menupopup>
+	</toolbarbutton>
+</toolbaritem>
+</overlay>

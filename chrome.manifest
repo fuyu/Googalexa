@@ -1,0 +1,10 @@
+content		googalexa	chrome/content/
+overlay		chrome://browser/content/browser.xul	chrome://googalexa/content/googalexa.xul
+
+skin		googalexa		classic skin/
+skin		googalexa-os	classic skin/win/
+
+# Support for Mac
+override chrome://googalexa-os/skin/os.css    chrome://googalexa/skin/mac/os.css os=Darwin
+
+style		chrome://global/content/customizeToolbar.xul	chrome://googalexa/skin/global.css

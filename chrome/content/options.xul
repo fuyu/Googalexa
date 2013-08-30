@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<prefwindow 
+	id="googalexa-prefwindow"
+	title="Google-Alexa Rank Preferences"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<prefpane label="Google-Alexa Preferences">
+		<preferences>
+			<preference id="googalexa-formatnumbers" name="extensions.googalexa.formatNumbers" type="bool"/>
+			<preference id="googalexa-roundthousands" name="extensions.googalexa.roundThousands" type="bool"/>
+			<preference id="googalexa-roundmillions" name="extensions.googalexa.roundMillions" type="bool"/>
+
+		</preferences>
+
+		<groupbox>
+			<caption label="Settings"/>
+			<grid>
+				
+				<rows>
+					<row>
+						<label control="fm" value="Format numbers (1234567 => 1,234,567)"/>
+						<checkbox id="fm" preference="googalexa-formatnumbers"/>
+					</row>
+					<row>
+						<label control="rt" value="Round thousands (123456 => 123K)"/>
+						<checkbox id="rt" preference="googalexa-roundthousands"/>
+					</row>	
+					<row>
+						<label control="rm" value="Round millions (1234567 => 1.2M)"/>
+						<checkbox id="rm" preference="googalexa-roundmillions"/>
+					</row>
+				</rows>
+			</grid>
+		</groupbox>	
+
+	</prefpane>
+
+</prefwindow>

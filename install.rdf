@@ -1,0 +1,30 @@
+<?xml version="1.0"?>  
+  
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"  
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>googalexa@rank.it</em:id>
+    <em:version>1.0.5</em:version>
+    <em:type>2</em:type>
+    
+	<!-- Front End MetaData -->
+    <em:name>GoogAlexa</em:name>
+    <em:description>Google and Alexa site statistics</em:description>
+    <em:creator>Maksym Stefanchuk</em:creator>
+	
+	<em:optionsURL>chrome://googalexa/content/options.xul</em:optionsURL>
+
+	
+    <!-- Target Application this extension can install into,   
+         with minimum and maximum supported versions. -->   
+    <em:targetApplication>  
+      <Description>  
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>  
+        <em:minVersion>3.6</em:minVersion>  
+        <em:maxVersion>11.*</em:maxVersion>  
+      </Description>  
+    </em:targetApplication>  
+    
+  </Description>        
+</RDF>

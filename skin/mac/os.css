@@ -1,0 +1,9 @@
+.googalexa-google-rank-label {
+	display:inline-block; font:11px Arial; color:#222222;
+	margin-bottom:2px !important;
+}
+.googalexa-alexa-rank-label {
+	font:11px Arial; color:#006898; margin-top:2px !important;
+}
+.googalexa-google-na-label {margin-bottom:2px !important; padding:0 1px 0 0px;}
+.googalexa-alexa-na-label {margin-top:2px !important; padding:0 0px 0 1px;}

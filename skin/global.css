@@ -1,0 +1,17 @@
+@import "chrome://googalexa-os/skin/os.css";
+
+.googalexa-rank-loading-img{list-style-image: url("chrome://googalexa/skin/loader.png");}
+
+.googalexa-rank-na-img{list-style-image: url("chrome://googalexa/skin/na.png");}
+.googalexa-rank-empty-img{list-style-image: url("chrome://googalexa/skin/empty.png");}
+
+.googalexa-rank-star{list-style-image: url("chrome://googalexa/skin/star.png");}
+
+.googalexa-menu-reload{list-style-image: url("chrome://googalexa/skin/reload.png");}
+.googalexa-menu-google{list-style-image: url("chrome://googalexa/skin/google.png");}
+.googalexa-menu-alexa{list-style-image: url("chrome://googalexa/skin/alexa.png");}
+
+.googalexa-icon-button {list-style-image: url("chrome://googalexa/skin/icon.png");
+	-moz-box-orient:horizontal !important;}
+
+.googalexa-hidden{display:none !important;}

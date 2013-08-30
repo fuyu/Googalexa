@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/" ?>
+<?xml-stylesheet type="text/css" href="chrome://googalexa/skin/global.css"?>
+
+<overlay id="googalexa" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+ 
+ <script type="application/x-javascript" src="chrome://googalexa/content/action.js" />
+ 
+ <toolbar id="nav-bar">
+	<toolbaritem 
+		id="googalexa-toolbaritem"
+		removable="true"
+		label="GoogAlexa"
+		tooltiptext="Ranking">
+
+		<toolbarbutton 
+			id="googalexa-rank-button-1"
+			class="googalexa-icon-button toolbarbutton-1"
+			type="menu"
+			label="GoogAlexa">
+
+			<menupopup id="googalexa-google-alex-menu-1">
+			  <menuitem label="Google: n/a" id="googalexa-menuitem-google-1" class="menuitem-iconic googalexa-menu-google" />
+			  <menuitem label="Alexa: n/a" id="googalexa-menuitem-alexa-1" class="menuitem-iconic googalexa-menu-alexa" />
+			  <menuitem 
+			  	label="Reload"
+			  	id="googalexa-google-alexa-reload-1" 
+			  	class="menuitem-iconic googalexa-menu-reload" 
+			  	oncommand="Googalexa.reload()" />
+			</menupopup>
+		</toolbarbutton>
+
+	</toolbaritem>
+</toolbar>
+</overlay>
