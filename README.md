@@ -24,3 +24,6 @@ color:#222222;
 font:12px Arial;
 ```
 
+## Example
+
+![alt tag](https://addons.cdn.mozilla.net/img/uploads/previews/full/112/112537.png)
