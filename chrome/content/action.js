@@ -421,7 +421,10 @@ Googalexa.BrowserOverlay = {
 		if (Application.prefs.getValue(firstRun, null)) {
 			Application.prefs.setValue(firstRun, false);
 			// this.installAddon("nav-bar", "googalexa-rank-button");
-			this.installAddon("nav-bar", "googalexa-toolbaritem");
+			var installed = this.installAddon("nav-bar-customization-target", "googalexa-toolbaritem");
+			if (! installed) {	// then it's FF version < 29
+				this.installAddon("nav-bar", "googalexa-toolbaritem");
+			}
 		} else if (this.addonIsOnTheNavigatorToolbar() == false) {
 			this.addonWasOnTheNavigatorToolbarBeforeCustomization = false;
 			return;
@@ -478,8 +481,13 @@ Googalexa.BrowserOverlay = {
 
 	
 	installAddon : function(toolbarId, id, afterId) {  
-		if (!document.getElementById(id)) {  
+		if (document.getElementById(id))
+			return false;
+
+		//if (! document.getElementById(id)) {  
 			var toolbar = document.getElementById(toolbarId);  
+		if (! toolbar)
+			return false;
 	  
 			// If no afterId is given, then append the item to the toolbar  
 			var before = null;  
@@ -493,8 +501,11 @@ Googalexa.BrowserOverlay = {
 			toolbar.setAttribute("currentset", toolbar.currentSet);  
 			document.persist(toolbar.id, "currentset");  
 	  
-			if (toolbarId == "addon-bar")  toolbar.collapsed = false;  
-		}
+			if (toolbarId == "addon-bar")
+				toolbar.collapsed = false;  
+
+			return true;
+		//}
 	},
 
 
@@ -548,10 +559,12 @@ Googalexa.BrowserOverlay = {
 	customizeStart: function(e) {
 		let theToolbox = e.target;
 
-		// Firebug.Console.log(document.getElementById('googalexa-toolbaritem'));
+		//Firebug.Console.log(document.getElementById('googalexa-toolbaritem'));
+		//Firebug.Console.log(document.getElementById('nav-bar'));
 
 		// now we know the user has started customizing
-		if (Googalexa.BrowserOverlay.addonIsOnTheNavigatorToolbar() == false) return;
+		if (Googalexa.BrowserOverlay.addonIsOnTheNavigatorToolbar() == false)
+			return;
 
 
 		// show the icon button, and remove rank button

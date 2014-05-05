@@ -1,0 +1,9 @@
+#!/bin/bash
+
+zip -r ../googalexa.zip .	\
+	-x "build"				\
+	-x "\.*"				\
+	-x "*/\.*"
+
+cd ..
+mv googalexa.zip googalexa.xpi

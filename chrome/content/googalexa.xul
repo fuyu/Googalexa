@@ -7,7 +7,7 @@
  
  <script type="application/x-javascript" src="chrome://googalexa/content/action.js" />
  
- <toolbar id="nav-bar">
+<toolbarpalette id="BrowserToolbarPalette">
 	<toolbaritem 
 		id="googalexa-toolbaritem"
 		removable="true"
@@ -32,5 +32,5 @@
 		</toolbarbutton>
 
 	</toolbaritem>
-</toolbar>
+</toolbarpalette>
 </overlay>
