@@ -417,12 +417,15 @@ Googalexa.BrowserOverlay = {
 	addonWasOnTheNavigatorToolbarBeforeCustomization: -1,
 	
 	init : function () {
-		let firstRun = "extensions.googalexa.firstRun";
-		if (Application.prefs.getValue(firstRun, null)) {
-			Application.prefs.setValue(firstRun, false);
-			// this.installAddon("nav-bar", "googalexa-rank-button");
+    var prefs = Components.classes["@mozilla.org/preferences-service;1"]
+             .getService(Components.interfaces.nsIPrefService)
+             .getBranch("extensions.googalexa.");
+
+    let firstRun = prefs.getBoolPref("firstRun");
+		if (firstRun) {
+      prefs.setBoolPref("firstRun", false);
 			var installed = this.installAddon("nav-bar-customization-target", "googalexa-toolbaritem");
-			if (! installed) {	// then it's FF version < 29
+			if (!installed) {	// then it's FF version < 29
 				this.installAddon("nav-bar", "googalexa-toolbaritem");
 			}
 		} else if (this.addonIsOnTheNavigatorToolbar() == false) {
