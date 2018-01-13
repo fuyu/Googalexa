@@ -3,6 +3,11 @@ Googalexa
 
 Minimalistic Firefox add-on for Google and Alexa site statistics
 
+## New version
+https://github.com/fuyu/alexa-rank-webextension
+
+# Old version description
+
 ## Install
 
 Install Googalexa from [Mozilla Add-ons page](https://addons.mozilla.org/en-US/firefox/addon/googalexa/).
